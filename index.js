@@ -5,9 +5,7 @@ const dotenv = require('dotenv').config();
 const app = express();
 app.use(cors());
 
-const PORT = 2030
-
-// const PORT = process.env.PORT || 4000
+const PORT = process.env.PORT || 4000
 
 const HNG__EMAIL = "isaacsegun2055@gmail.com";
 const GITHUB_REPO = "https://github.com/officiabreezy/HNG12-SIMPLE-API";
@@ -19,6 +17,8 @@ app.get('/', (req, res) => {
         github: GITHUB_REPO
     });
 });
-
+  
+app.listen(PORT, () => 
+    console.log(`Server is running on port ${PORT}`));
 
 module.exports = app;
