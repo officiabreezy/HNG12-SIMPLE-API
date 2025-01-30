@@ -6,9 +6,9 @@ Using the registered email on the HNG12 slack workspace,the current datetime in 
 ## Stack
 **Framework**: Nodejs
 
-**Language**:Javascript
+**Language**: Javascript
 
-**Deployment**:Vercel
+**Deployment**: Vercel
 
 ## Setup Instructions
 **How to run locally**
@@ -45,4 +45,4 @@ Using the registered email on the HNG12 slack workspace,the current datetime in 
 - API: https://hng-12-simple-api.vercel.app/
 
 ## More about Node.js Developers
-- https://hng.tech/hire/nodejs-developers
+- HNG Backlink: https://hng.tech/hire/nodejs-developers
