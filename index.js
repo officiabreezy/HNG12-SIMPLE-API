@@ -4,11 +4,7 @@ const dotenv = require('dotenv').config();
 
 const app = express();
 
-app.options('*', cors());
-app.use(cors({ 
-    methods: ['GET','HEAD','POST'],
-    allowedHeaders: ['Content-Type'],
-}));
+app.use(cors())
 
 const PORT = process.env.PORT || 4000
 
