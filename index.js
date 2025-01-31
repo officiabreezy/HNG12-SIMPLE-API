@@ -4,8 +4,9 @@ const dotenv = require('dotenv').config();
 
 const app = express();
 app.use(cors({ 
-    origin:'*',
-    method:['GET', 'POST'],
+    origin:['*',"http://localhost:2030"],
+    methods: 'GET,POST,PUT,DELETE', 
+    allowedHeaders: ['Content-Type', 'Authorization'], 
 }));
 
 const PORT = process.env.PORT || 4000
@@ -21,5 +22,9 @@ app.get('/', (req, res) => {
     });
 });
   
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
+});
+
 
 module.exports = app;
