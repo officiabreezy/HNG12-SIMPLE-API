@@ -3,10 +3,11 @@ const cors = require('cors');
 const dotenv = require('dotenv').config();
 
 const app = express();
+
+app.options('*', cors());
 app.use(cors({ 
-    origin:['*',"http://localhost:2030"],
-    methods: 'GET,POST,PUT,DELETE', 
-    allowedHeaders: ['Content-Type', 'Authorization'], 
+    methods: ['GET','HEAD','POST'],
+    allowedHeaders: ['Content-Type'],
 }));
 
 const PORT = process.env.PORT || 4000
