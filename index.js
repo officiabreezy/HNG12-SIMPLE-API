@@ -7,11 +7,9 @@ const app = express();
 
 const corsOptions = {
     origin: '*',
-    methods: 'GET, POST',
-    allowedHeaders: ['Content-Type'],
   };
 
-app.use(express.json());  // for parsing application/json
+app.use(express.json()); 
 app.use(cors(corsOptions));
 
 
@@ -23,7 +21,7 @@ app.get('/', (req, res) => {
     res.json({
         email: HNG__EMAIL,
         current_datetime: new Date().toISOString(),
-        github: GITHUB_REPO
+        github_url: GITHUB_REPO
     });
 });
   
